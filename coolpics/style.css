@@ -1,0 +1,62 @@
+body{
+    margin: 0 auto;
+}
+
+header, footer {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #52489c;
+    color: black;
+    text-decoration: none;
+    
+}
+a {
+    text-align: center;
+    gap: 400px;
+    color: white;
+    text-decoration: none;
+}
+
+section img{
+    box-shadow: 10px 10px 5px #000;
+    border-radius: 10px;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.column {
+    flex: 0 0 calc(33.33% - 20px); /* 3 per row on desktop */
+    margin: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.column img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #000;
+}
+
+/* Tablet: 2 per row */
+@media screen and (max-width: 768px) {
+    .column {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+/* Phone: 1 per row */
+@media screen and (max-width: 500px) {
+    .column {
+        flex: 0 0 75%;
+    }
+}
+
+
