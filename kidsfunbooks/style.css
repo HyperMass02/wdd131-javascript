@@ -1,9 +1,12 @@
 body {
-    margin: 0 auto;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f2f2f2;
 }
 
 #title {
     text-align: center;
+    margin-top: 20px;
 }
 
 ul {
@@ -31,7 +34,69 @@ li a:hover {
     background-color: #111;
 }
 
-.grid-container {
+.main-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 100px;
+}
+
+.articles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Each article row */
+.article-row {
+  display: grid;
+  grid-template-columns: 20% 20% 60%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  align-items: center;
+  gap: 15px;
+}
+
+.book-meta {
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.4;
+}
+
+.book-image img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.book-info h2 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.book-info p {
+  margin: 5px 0;
+}
+
+#right-column{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+/* .grid-container {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     height: 100vh;
@@ -44,40 +109,20 @@ li a:hover {
     text-align: left;
 }
 
-.column-1 { background-color: #3498db; }
-.column-2 { background-color: #2ecc71; overflow-y: auto; color: black; }
-.column-3 { background-color: #e74c3c; }
+.column-1 {
+    background-color: #3498db;
+}
+.column-2 {
+    background-color: #2ecc71;
+    overflow-y: auto;
+    color: black;
+}
+.column-3 {
+    background-color: #e74c3c;
+}
 
 .articles-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.article-card {
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    background-color: black;
-}
-
-.article-card img {
-    width: 70%;
-    height: auto;
-    padding: 5px;
-}
-
-.article-content {
-    padding: 15px;
-}
-
-.article-content h2 {
-    margin: 0 0 10px;
-    font-size: 1.2em;
-    text-align: left;
-}
-
-.article-content p {
-    margin: 5px 0;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+} */
