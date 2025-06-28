@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="main.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -12,27 +13,22 @@
     <div id="flex-head">
         <div id="search">
             <label for="Search">Search for Recipe:</label>
-            <input class="" type="text" id="Search7" name="Search"  placeholder="..."><br><br>
-            <input class="" type="submit" value="Search">
+            <input type="text" id="search-box" placeholder="Search for a recipe...">
+            <input type="submit" id="search-btn" value="Search">
+
         </div>
     </div>
     </header>
     <main>
-        <section class="media-card">
-            <div class="media-card__image"><img src="image.png" alt="Curry"></div>
-            <div class="media-card__content">
-                <h3>Curry</h3>
-                <p>Chicken curry from the Indian subcontinent typically features 
-                    chicken stewed in a tomato-based sauce seasoned with aromatic spices. 
-                    This recipe, like many others, calls for curry powder 
-                    (a spice blend made with coriander, turmeric, cumin, and chili powder).</p>
-            </div>
-        </section>
+        <div id="recipe-container"><div>
     </main>
     <footer>
-        <img class="social-icon" src="instagram.png" alt="">
-        <img class="social-icon" src="face-book.png" alt="">
-        <img class="social-icon" src="pinterest.png" alt="">
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
 
     </footer>
 </body>

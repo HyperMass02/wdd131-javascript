@@ -1,10 +1,6 @@
 * {
   box-sizing: border-box;
-}
-
-footer .social-icon{
-    height: 10%;
-    width: 10%;
+  border-radius: 5%;
 }
 
 body {
@@ -12,7 +8,6 @@ body {
   font-size: 20px;
   max-width: 1280px;
   padding: 1em;
-  margin: auto;
   background-color: #fdfdfd;
   font-family: sans-serif;
 }
@@ -39,9 +34,10 @@ img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  max-width: 300px;
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
 }
-
 
 .media-card {
   display: flex;
@@ -54,6 +50,28 @@ img {
   margin-top: 0;
 }
 
+footer {
+  display: flex;
+}
+
+footer .social {
+  display: flex;
+  gap: 1em;
+  flex-shrink: 1;
+}
+
+  
+header,
+main,
+footer {
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border: 2px solid white;
+  background-color: palevioletred;
+  max-width: 800px;
+}
+
+/* Responsive layout for media-card on wider screens */
 @media screen and (min-width: 550px) {
   .media-card {
     flex-direction: row;
@@ -66,19 +84,24 @@ img {
   .media-card__content {
     flex: 0 1 60ch;
   }
+
+footer .social {
+  display: flex;
+  gap: 1rem;
+  justify-content: right;
+  align-items: right;
 }
 
+footer .social img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.2s ease;
+}
 
-@media screen and (min-width: 400px) {
-  header,
-  main,
-  footer {
-    max-width: 800px;
-    margin: 1rem auto;
-    border: 2px solid white;
-    padding: 1.5rem;
-    background-color: palevioletred;
-  }
+footer .social img:hover {
+  transform: scale(1.2); 
+}
+
 }
 
 
@@ -87,13 +110,26 @@ img {
   main,
   footer {
     max-width: 400px;
-    margin: 1rem auto;
     border: 1px solid white;
     padding: 1rem;
     background-color: lightblue;
   }
 
-  img {
-    max-width: 80%; /* Adjust to avoid making it too small */
+  footer .social {
+    display: flex;
+    gap: 1rem;
+    justify-content: right;
+    align-items: right;
   }
+
+  footer .social img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s ease;
+  }
+
+  footer .social img:hover {
+    transform: scale(1.2); /* slightly zooms icon on hover */
+  }
+
 }
